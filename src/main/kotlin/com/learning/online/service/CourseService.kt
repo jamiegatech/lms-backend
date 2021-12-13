@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service
 class CourseService(var courseRepository: CourseRepository) {
     fun findAll(): List<Course> = courseRepository.findAll()
 
+    fun findAllByStudentId(studentId: Int): List<Course> = courseRepository.findAllByStudentId(studentId)
+
+    fun findAllByInstructorId(instructorId: Int): List<Course> = courseRepository.findAllByInstructorId(instructorId)
+
     fun findById(id: Int): Course = courseRepository.findById(id).orElseThrow()
 
     fun save(course: Course): Course = courseRepository.save(course)

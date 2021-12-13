@@ -4,9 +4,13 @@ import com.learning.online.dto.StudentDto
 import com.learning.online.service.StudentService
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin
 @RestController
 @RequestMapping("/students")
 class StudentController(var studentService: StudentService) {
+    @GetMapping("/course/{id}")
+    fun getAllById(@PathVariable id: Int): List<StudentDto> = studentService.findAllByCourseId(id).map(StudentDto.Companion::fromModel)
+
     @GetMapping
     fun get(): List<StudentDto> = studentService.findAll().map(StudentDto.Companion::fromModel)
 

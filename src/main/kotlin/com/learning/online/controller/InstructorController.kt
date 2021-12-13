@@ -4,6 +4,7 @@ import com.learning.online.dto.InstructorDto
 import com.learning.online.service.InstructorService
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin
 @RestController
 @RequestMapping("/instructors")
 class InstructorController(var instructorService: InstructorService) {

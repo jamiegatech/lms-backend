@@ -5,8 +5,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "ASSIGNMENT")
-data class Assignment(@Column(name = "course_id") val courseId: Int,
-                      @Column(name = "name") val name: String,
+data class Assignment(@Column(name = "name") val name: String,
                       @Column(name = "description") val description: String,
                       @Column(name = "due_date") val dueDate: LocalDateTime,
-                      @GeneratedValue(strategy= GenerationType.IDENTITY)@Column(name = "assignment_id") @Id val assignmentId: Int)
+                      @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "assignment_id") @Id val assignmentId: Int)

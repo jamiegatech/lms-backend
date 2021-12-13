@@ -4,6 +4,7 @@ import com.learning.online.dto.AssignmentSubmissionDto
 import com.learning.online.service.AssignmentSubmissionService
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin
 @RestController
 @RequestMapping("/assignment-submissions")
 class AssignmentSubmissionController(var assignmentSubmissionService: AssignmentSubmissionService) {
