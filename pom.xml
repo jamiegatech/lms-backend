@@ -14,7 +14,7 @@
     <name>online learning</name>
     <description>online learning</description>
     <properties>
-        <java.version>11</java.version>
+<!--         <java.version>11</java.version> -->
         <kotlin.version>1.5.31</kotlin.version>
     </properties>
     <dependencies>
